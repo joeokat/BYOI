@@ -13,21 +13,34 @@ export default function Layout() {
         headerTintColor: "#1e2632",
         headerRight: () => (
           <MaterialCommunityIcons
-            onPress={() => router.push("/About")}
+            onPress={() => router.push("/about")}
             name="book-information-variant"
             size={24}
-            color="black"
+            color="#1e2632"
           />
         ),
       }}
     >
-      <Stack.Screen name="index" options={{ title: "Welcome!" }} />
-      <Stack.Screen name="FirstScreen" options={{ title: "Title" }} />
-      <Stack.Screen name="SecondScreen" options={{ title: "Title!" }} />
-      <Stack.Screen name="ThirdScreen" options={{ title: "Title!" }} />
-      <Stack.Screen name="FourthScreen" options={{ title: "Title!" }} />
-      <Stack.Screen name="FAQsScreen" options={{ title: "FAQs!" }} />
-      <Stack.Screen name="About" options={{ presentation: "About" }} />
+      <Stack.Screen name="index" options={{ title: "" }} />
+      <Stack.Screen
+        name="FirstScreen"
+        options={{ title: "Waking Your Conscious" }}
+      />
+      <Stack.Screen name="SecondScreen" options={{ title: "" }} />
+      <Stack.Screen name="ThirdScreen" options={{ title: "" }} />
+      <Stack.Screen name="FourthScreen" options={{ title: "" }} />
+      <Stack.Screen name="FAQsScreen" options={{ title: "FAQs" }} />
+      <Stack.Screen
+        name="about"
+        options={{
+          presentation: "about",
+          headerStyle: {
+            backgroundColor: "#1e2632",
+          },
+          headerTintColor: "#ffe030",
+          headerRight: "",
+        }}
+      />
     </Stack>
   );
 }

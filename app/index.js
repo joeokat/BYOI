@@ -1,5 +1,7 @@
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, View, Pressable } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Page() {
   const router = useRouter();
@@ -11,48 +13,68 @@ export default function Page() {
   const cards = [
     {
       uid: 1,
-      title: "Part 1",
+      title: "Wake",
       page: "/FirstScreen",
-      icon: "/icons/abc.svg",
+      icon: (
+        <MaterialIcons name="emoji-food-beverage" size={48} color="#1e2632" />
+      ),
     },
     {
       uid: 2,
-      title: "Part 2",
+      title: "Seek",
       page: "/SecondScreen",
-      icon: "/icons/efg.svg",
+      icon: (
+        <MaterialIcons name="compass-calibration" size={48} color="#1e2632" />
+      ),
     },
     {
       uid: 3,
-      title: "Part 3",
+      title: "Discover",
       page: "ThirdScreen",
-      icon: "/icons/hij.svg",
+      icon: <MaterialIcons name="self-improvement" size={48} color="#1e2632" />,
     },
     {
       uid: 4,
-      title: "Part 4",
+      title: "Delight",
       page: "/FourthScreen",
-      icon: "/icons/klm.svg",
+      icon: <MaterialIcons name="emoji-people" size={48} color="#1e2632" />,
+    },
+    {
+      uid: 5,
+      title: "Community",
+      page: "",
+      icon: <MaterialIcons name="people" size={48} color="#1e2632" />,
+    },
+    {
+      uid: 6,
+      title: "FAQs",
+      page: "/FAQsScreen",
+      icon: <MaterialIcons name="question-answer" size={48} color="#1e2632" />,
     },
   ];
 
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Inside Out</Text>
-        <Text style={styles.subtitle}>
-          The Introvert's Guide to Self-Discovery
-        </Text>
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.main}>
+          <Text style={styles.title}>Inside Out</Text>
+          <Text style={styles.subtitle}>
+            The Introvert's Guide to Self-Discovery
+          </Text>
+        </View>
+
+        <View style={styles.cardContainer}>
+          {cards.map((card) => (
+            <Pressable key={card.uid} onPress={() => press(card.page)}>
+              <View style={styles.card}>
+                <Text>{card.icon}</Text>
+                <Text style={styles.cardText}>{card.title}</Text>
+              </View>
+            </Pressable>
+          ))}
+        </View>
       </View>
-      <View style={styles.cardContainer}>
-        {cards.map((card) => (
-          <Pressable key={card.uid} onPress={() => press(card.page)}>
-            <View style={styles.card}>
-              <Text style={styles.cardText}>{card.title}</Text>
-            </View>
-          </Pressable>
-        ))}
-      </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -60,44 +82,45 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    // alignItems: "center",
+    backgroundColor: "#1e2632",
   },
 
   main: {
-    flex: 1,
     maxWidth: 960,
     marginHorizontal: "auto",
-    marginBottom: 40,
+    marginBottom: 32,
   },
 
   title: {
     fontSize: 64,
     fontWeight: "bold",
-    color: "#212121",
-  },
-
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-
-  card: {
-    width: 170,
-    height: 170,
-    borderRadius: 10,
-    margin: 8,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#1e2632",
-  },
-
-  cardText: {
-    fontSize: 24,
-    fontWeight: 500,
     color: "#f6f6f6",
   },
 
+  subtitle: {
+    fontSize: 32,
+    color: "#f9f9f9",
+  },
+
+  card: {
+    width: 140,
+    height: 140,
+    margin: 8,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#ffe030",
+  },
+
+  cardText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#1e2632",
+  },
+
   cardContainer: {
+    justifyContent: "center",
+    alignItems: "center",
     flexDirection: "row",
     flexWrap: "wrap",
   },
