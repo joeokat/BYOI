@@ -13,7 +13,7 @@ export default function Layout() {
         headerTintColor: "#1e2632",
         headerRight: () => (
           <MaterialCommunityIcons
-            onPress={() => router.push("/about")}
+            onPress={() => router.replace("/About")}
             name="book-information-variant"
             size={24}
             color="#1e2632"
@@ -30,17 +30,7 @@ export default function Layout() {
       <Stack.Screen name="ThirdScreen" options={{ title: "" }} />
       <Stack.Screen name="FourthScreen" options={{ title: "" }} />
       <Stack.Screen name="FAQsScreen" options={{ title: "FAQs" }} />
-      <Stack.Screen
-        name="about"
-        options={{
-          presentation: "about",
-          headerStyle: {
-            backgroundColor: "#1e2632",
-          },
-          headerTintColor: "#ffe030",
-          headerRight: "",
-        }}
-      />
+      <Stack.Screen name="About" options={{ title: "About" }} />
     </Stack>
   );
 }
