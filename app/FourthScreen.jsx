@@ -9,7 +9,7 @@ export default function FourthScreen() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <View>
+        <View style={styles.main}>
           <Text style={styles.title}>Part 4: Settling In for Good </Text>
           <Text style={styles.subtitle}>
             <Text style={styles.bold}>
@@ -79,12 +79,17 @@ export default function FourthScreen() {
             because suddenly everything can fall into place for you and you
             realize what matters most. Try it. You'll like it.
           </Text>
-          <Text style={styles.title2}>All the best in life, Commrade.</Text>
+          <Text style={styles.title2}>All the best in life, Commrades.</Text>
           <Text style={styles.subtitle}>
             Go to the{" "}
             <Text style={styles.highlight}>FAQ’s, Tips and warning</Text>{" "}
             section to{" "}
-            <Button title="CHECK" onPress={() => route.push("/FAQsScreen")} />{" "}
+            <Text
+              style={styles.underline}
+              onPress={() => route.push("/FAQsScreen")}
+            >
+              CHECK
+            </Text>{" "}
             likely thoughts that may interest you.
           </Text>
         </View>
@@ -98,6 +103,12 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: "#212121",
+  },
+
+  main: {
+    maxWidth: 960,
+    marginHorizontal: "auto",
+    marginBottom: 32,
   },
 
   bold: { fontWeight: "bold", color: "#f6f6f6" },

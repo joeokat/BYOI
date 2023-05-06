@@ -41,7 +41,7 @@ export default function Page() {
     },
     {
       uid: 5,
-      title: "Community",
+      title: "Hangout",
       page: "",
       icon: <MaterialIcons name="people" size={48} color="#1e2632" />,
     },
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    // maxHeight: 900,
     backgroundColor: "#1e2632",
   },
 

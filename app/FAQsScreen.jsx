@@ -6,7 +6,7 @@ export default function FAQsScreen() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <View>
+        <View style={styles.main}>
           <Text style={styles.title}>Frequently Asked Questions</Text>
           <Text style={styles.subtitle}>
             Below will be funny examples but serious recommendations I would be
@@ -95,7 +95,7 @@ export default function FAQsScreen() {
           </Text>
 
           <Text style={styles.title2}>
-            😖 I am feeling afraid to change or let go. How can I overcome this?
+            🥶 I am feeling afraid to change or let go. How can I overcome this?
           </Text>
           <Text
             style={{
@@ -198,7 +198,7 @@ export default function FAQsScreen() {
           </Text>
           <Text style={styles.subtitle}>
             • It’s about you and your inner self so remember, always love
-            yourself more than anybody else, unlike me 😅.
+            yourself more than anybody else.
           </Text>
           <Text style={styles.subtitle}>
             • Be true to yourself and don't let others change you.
@@ -273,6 +273,12 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: "#212121",
+  },
+
+  main: {
+    maxWidth: 960,
+    marginHorizontal: "auto",
+    marginBottom: 32,
   },
 
   bold: { fontWeight: "bold", color: "#f6f6f6" },
