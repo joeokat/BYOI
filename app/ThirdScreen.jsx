@@ -6,7 +6,7 @@ export default function ThirdScreen() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <View>
+        <View styl={styles.main}>
           <Text style={styles.title}>Part 3: Waking Your Conscious</Text>
           <Text style={styles.subtitle}></Text>
           <Text style={styles.subtitle}></Text>
@@ -24,6 +24,12 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: "#212121",
+  },
+
+  main: {
+    maxWidth: 960,
+    marginHorizontal: "auto",
+    marginBottom: 32,
   },
 
   title: {
