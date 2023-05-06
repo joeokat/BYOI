@@ -26,7 +26,7 @@ export default function SecondScreen() {
             When you do it right you will have a sense of some vim after
             immersing yourself in solitude, I’m sure the word you will be
             looking for is{" "}
-            <Text style={styles.bold}>YES! I can do/ make it.</Text>
+            <Text style={styles.bold}>YES! I can do / make it.</Text>
           </Text>
           <Text style={styles.subtitle}>
             <Text style={styles.highlight}>o</Text> Every person needs time

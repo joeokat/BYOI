@@ -2,6 +2,7 @@ import { useRouter } from "expo-router";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const router = useRouter();
@@ -10,10 +11,31 @@ export default function Page() {
     router.push(page);
   };
 
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSplashScreen(false);
+    }, 5000);
+  }, []);
+
+  if (showSplashScreen) {
+    return (
+      <View style={styles.splashScreen}>
+        <View style={styles.splashMain}>
+          <Text style={styles.splashTitle}>Inside Out</Text>
+          <Text style={styles.splashSub}>
+            The Introvert's Guide to Self-Discovery
+          </Text>
+        </View>
+      </View>
+    );
+  }
+
   const cards = [
     {
       uid: 1,
-      title: "Wake",
+      title: "Wakening",
       page: "/FirstScreen",
       icon: (
         <MaterialIcons name="emoji-food-beverage" size={48} color="#1e2632" />
@@ -21,7 +43,7 @@ export default function Page() {
     },
     {
       uid: 2,
-      title: "Seek",
+      title: "Solitude",
       page: "/SecondScreen",
       icon: (
         <MaterialIcons name="compass-calibration" size={48} color="#1e2632" />
@@ -79,6 +101,30 @@ export default function Page() {
 }
 
 const styles = StyleSheet.create({
+  splashScreen: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "#ffe030",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  splashMain: {
+    maxWidth: 960,
+    marginHorizontal: "auto",
+  },
+
+  splashTitle: {
+    fontSize: 64,
+    fontWeight: "900",
+    color: "#212121",
+  },
+
+  splashSub: {
+    fontSize: 32,
+    color: "#212121",
+  },
+
   container: {
     flex: 1,
     padding: 16,

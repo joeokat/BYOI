@@ -262,6 +262,30 @@ export default function FAQsScreen() {
             • Don't over-analyze everything! There is no right or wrong. If
             you're trying, you're doing it right. Dassor!
           </Text>
+          <Text style={styles.title2}>Help us do more</Text>
+
+          <Text style={styles.subtitle}>
+            Consider buying us a cup of coffee If the{" "}
+            <Text style={{ color: "#ffe030" }}>Community</Text> or the{" "}
+            <Text style={{ color: "#ffe030" }}>Guide: Inside Out</Text> has
+            helped / improved your life in anyway. 😇
+          </Text>
+
+          <Text style={styles.subtitle}>
+            Donations go towards programme initiatives, meetups, AppStore &
+            PlayStore services, and the core staff of Fleet Labs.
+          </Text>
+
+          <Text style={styles.subtitle}>Thanks for your support 🙏🏽.</Text>
+          <View
+            style={{ marginTop: 24 }}
+            href="https://paystack.com/pay/inside-out"
+          >
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              width="200"
+            />
+          </View>
         </View>
       </View>
     </ScrollView>

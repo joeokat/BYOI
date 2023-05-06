@@ -30,7 +30,7 @@ export default function FirstScreen() {
           <Text style={styles.subtitle}>
             <Text style={styles.bold}>NB:</Text> This isn't an exercise. It's
             about clarification and identification of issues. Were you hold your
-            strength and were u fall short.
+            strength and were you fall short.
           </Text>
           <Text style={styles.subtitle}>
             Spend a little time clarifying the past in your timeline. A timeline
@@ -58,7 +58,7 @@ export default function FirstScreen() {
             difference.
           </Text>
           <Text style={styles.title2}>
-            Distinguish your thoughts from the thoughts of others.{" "}
+            Distinguish your thoughts from the thoughts of others
           </Text>
           <Text style={styles.subtitle}>
             <Text style={{ color: "#ffbb1c", fontWeight: "bold" }}>*</Text> For
@@ -88,7 +88,7 @@ export default function FirstScreen() {
             what others have told you it becomes your belief form and starts to
             affect you based on what you have accepted, and that now becomes
             your new road map to guide you. Once you don't get the right
-            manual... I'm sure you knw not just how life will be but the life
+            manual... I'm sure you know not just how life will be but the life
             you will live, all because of what someone told you or what u
             accepted, making it automatically your belief.
           </Text>
@@ -102,18 +102,18 @@ export default function FirstScreen() {
               {" "}
               unlearn and then relearn
             </Text>{" "}
-            (I kinda like this part). Only this time, relearn based on your gut.
-            its not going to be easy but you got to drop d old habbit, more like
-            the old you or the totally drop{" "}
+            . Only this time, relearn based on your gut. its not going to be
+            easy but you got to drop old habbits, more like the old you or
+            totally drop{" "}
             <Text style={{ color: "#ffbb1c", fontWeight: "bold" }}>
               the chameleon or double life
             </Text>{" "}
             and relearn a new one based on your own belief system, molding your
             inner self to the new you. like i said its not going to be easy but
-            u got to try, there are others out there to put you on the ryt track
-            at least till u get on ur feet to realise the real you.
+            you got to try, there are others out there to put you on the right
+            track at least till you get on your feet to realise the real you.
           </Text>
-          <Text style={styles.title2}>Start relying on yourself. </Text>
+          <Text style={styles.title2}>Start relying on yourself </Text>
           <Text style={styles.subtitle}>
             <Text style={{ color: "#ffbb1c", fontWeight: "bold" }}>* </Text>
             Confidence and reliance are at the heart of finding yourself. If you
@@ -129,8 +129,8 @@ export default function FirstScreen() {
             They're not going to go away on their own. They might be coloring
             your approach to daily life, causing you to live up to other
             people's expectations instead of your own, just because someone did
-            something to hurt u doesnt mean others will or won’t, the best u can
-            do is learn from the incident and also the experience.
+            something to hurt you doesnt mean others will or won’t, the best you
+            can do is learn from the incident and also the experience.
           </Text>
           <Text style={styles.subtitle}>
             Anyway start trusting your own judgment and decision-making
@@ -164,14 +164,11 @@ export default function FirstScreen() {
           <Text style={styles.subtitle}>
             This step may take some major rehabilitation for some individuals
             but putting it into the too-hard basket won't make it go away.
-            please note that, it's really important.{" "}
+            Please note that, it's really important.{" "}
             <Text style={styles.bold}>#Remember</Text>, you can't drive your
             life forward if you are always gazing through your rear-view mirror!{" "}
             <Text style={styles.italic}>~ JoeOkat.</Text>
           </Text>
-          <Text style={styles.title2}>Organize your world</Text>
-          <Text style={styles.subtitle}></Text>
-          <Text style={styles.subtitle}></Text>
         </View>
       </View>
     </ScrollView>
