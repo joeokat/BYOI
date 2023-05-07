@@ -52,9 +52,7 @@ export default function ThirdScreen() {
             plain "uncomfortable". Getting out of your zone will not only teach
             you something, but it will force you to get to know you — what
             you're capable of, what you like, what you definitely don't like,
-            and what you were previously missing. If there’s no smile on your
-            face about this point then I’m totally convinced you are not just
-            weird but more to that.. Lolx…
+            and what you were previously missing.
           </Text>
           <Text style={styles.subtitle}>
             <Text style={styles.bold}>Question yourself:</Text> Ask yourself

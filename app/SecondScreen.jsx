@@ -58,10 +58,11 @@ export default function SecondScreen() {
             hunger or it could be painting. There is no scale when it comes to
             passion. You either feel it or you don't; none is better than any
             other. When you find something that zaps you out of bed in the
-            morning, cling onto it. You'll only bloom from there. (^_^)
+            morning, cling onto it. You'll only bloom from there.{" "}
+            <Text style={styles.bold}>(^_^)</Text>
           </Text>
           <Text style={styles.subtitle}>
-            <Text style={styles.bold}>Find a mentor</Text>: Though ultimately
+            <Text style={styles.bold}>Find a mentor:</Text> Though ultimately
             soul-searching can only be done by you and it's only you that
             determines what you need, having a mentor will be an incredible
             resource when you hit those unavoidable bumps in the road. Seek out

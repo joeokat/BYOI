@@ -13,9 +13,9 @@ export default function FourthScreen() {
           <Text style={styles.title}>Part 4: Settling In for Good </Text>
           <Text style={styles.subtitle}>
             <Text style={styles.bold}>
-              Act upon and use your newly discovered knowledge
-            </Text>
-            . Pick up those watercolors. Write a short story. Plan a trip to
+              Act upon and use your newly discovered knowledge:
+            </Text>{" "}
+            Pick up those watercolors. Write a short story. Plan a trip to
             Kakum. Have dinner with a family member. Start cracking jokes. Open
             up. Tell the truth. Whatever it is that you've decided you want to
             be or do, start being and doing it{" "}

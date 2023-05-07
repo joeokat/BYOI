@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { MaterialIcons, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 
 export default function Page() {
@@ -23,9 +23,13 @@ export default function Page() {
     return (
       <View style={styles.splashScreen}>
         <View style={styles.splashMain}>
+          <Image
+            source={"../images/hat.png"}
+            style={{ width: 100, height: 100 }}
+          />
           <Text style={styles.splashTitle}>Inside Out</Text>
-          <Text style={styles.splashSub}>
-            The Introvert's Guide to Self-Discovery
+          <Text style={{ fontWeight: "500", color: "#fff" }}>
+            Inspired by: WiKiHow
           </Text>
         </View>
       </View>
@@ -37,25 +41,29 @@ export default function Page() {
       uid: 1,
       title: "Wakening",
       page: "/FirstScreen",
-      icon: <FontAwesome name="child" size={48} color="#1e2632" />,
+      icon: (
+        <MaterialCommunityIcons
+          name="human-handsup"
+          size={48}
+          color="#1e2632"
+        />
+      ),
     },
     {
       uid: 2,
       title: "Solitude",
       page: "/SecondScreen",
-      icon: (
-        <MaterialIcons name="compass-calibration" size={48} color="#1e2632" />
-      ),
-    },
-    {
-      uid: 3,
-      title: "Discover",
-      page: "ThirdScreen",
       icon: <MaterialIcons name="self-improvement" size={48} color="#1e2632" />,
     },
     {
+      uid: 3,
+      title: "Change",
+      page: "ThirdScreen",
+      icon: <MaterialCommunityIcons name="human" size={48} color="#1e2632" />,
+    },
+    {
       uid: 4,
-      title: "Delight",
+      title: "Discovery",
       page: "/FourthScreen",
       icon: <MaterialIcons name="emoji-people" size={48} color="#1e2632" />,
     },
@@ -63,7 +71,13 @@ export default function Page() {
       uid: 5,
       title: "Hangout",
       page: "https://chat.whatsapp.com/JuyTvyNWx3P7kiqCMPgkIC",
-      icon: <Ionicons name="md-chatbubbles-sharp" size={48} color="#1e2632" />,
+      icon: (
+        <MaterialCommunityIcons
+          name="human-greeting-proximity"
+          size={48}
+          color="#1e2632"
+        />
+      ),
     },
     {
       uid: 6,
@@ -102,7 +116,7 @@ const styles = StyleSheet.create({
   splashScreen: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#ffe030",
+    backgroundColor: "#1e2632",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -115,12 +129,7 @@ const styles = StyleSheet.create({
   splashTitle: {
     fontSize: 64,
     fontWeight: "900",
-    color: "#212121",
-  },
-
-  splashSub: {
-    fontSize: 32,
-    color: "#212121",
+    color: "#ffe030",
   },
 
   container: {
