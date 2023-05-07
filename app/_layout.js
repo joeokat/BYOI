@@ -38,7 +38,7 @@ export default function Layout() {
           ),
         }}
       />
-      <Stack.Screen name="index" options={{ title: "" }} />
+      <Stack.Screen name="index" options={{ title: "Reference: WiKiHow" }} />
       <Stack.Screen
         name="FirstScreen"
         options={{ title: "Waking Your Conscious" }}

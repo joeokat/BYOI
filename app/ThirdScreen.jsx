@@ -4,7 +4,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function ThirdScreen() {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Part 3: Changing Your Perspective </Text>

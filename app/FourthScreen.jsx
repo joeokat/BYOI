@@ -7,7 +7,7 @@ export default function FourthScreen() {
   const route = useRouter();
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Part 4: Settling In for Good </Text>

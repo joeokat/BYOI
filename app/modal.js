@@ -1,7 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, Linking } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Linking,
+  Pressable,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 
 export default function About() {
   function rarible() {
@@ -9,8 +16,28 @@ export default function About() {
     Linking.openURL(uri);
   }
 
+  function twitter() {
+    const uri = "https://twitter.com/joeokat";
+    Linking.openURL(uri);
+  }
+
+  function linkedin() {
+    const uri = "https://www.linkedin.com/in/joeokat/";
+    Linking.openURL(uri);
+  }
+
+  function instagram() {
+    const uri = "https://instagram.com/joeokatgh";
+    Linking.openURL(uri);
+  }
+
+  function tiktok() {
+    const uri = "https://tiktok.com/@joe0kat";
+    Linking.openURL(uri);
+  }
+
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Inside Out</Text>
@@ -72,15 +99,45 @@ export default function About() {
                   />
                   <Text style={styles.position}>Accra, Ghana</Text>
                 </View>
-                <View style={styles.socialButtons}></View>
               </View>
             </View>
+            <View style={styles.socialButtons}>
+              <Pressable onPress={rarible}>
+                <View style={styles.button}>
+                  <Text
+                    style={{ fontWeight: 900, fontSize: 24, color: "#212121" }}
+                  >
+                    R
+                  </Text>
+                </View>
+              </Pressable>
+              <Pressable onPress={twitter}>
+                <View style={styles.button}>
+                  <FontAwesome5 name="twitter" size={24} color="#4787F3" />
+                </View>
+              </Pressable>
+              <Pressable onPress={linkedin}>
+                <View style={styles.button}>
+                  <FontAwesome5 name="linkedin" size={24} color="#3783D3" />
+                </View>
+              </Pressable>
+              <Pressable onPress={instagram}>
+                <View style={styles.button}>
+                  <FontAwesome5 name="instagram" size={24} color="#DA2E7D" />
+                </View>
+              </Pressable>
+              <Pressable onPress={tiktok}>
+                <View style={styles.button}>
+                  <FontAwesome5 name="tiktok" size={24} color="#101010" />
+                </View>
+              </Pressable>
+            </View>
             <Text style={styles.subtitle}>
-              Hi!, my name is Joshua, CEO of Fleet Labs Ghana and author of
-              Inside Out. As an introvert myself, I understand the challenges of
-              feeling limited by social norms and expectations. However, I
-              believe that our introverted nature is a gift that can help us
-              become explorers of life in our own unique way.
+              Hi! I'm Joshua, CEO of Fleet Labs Ghana and author of Inside Out.
+              As an introvert myself, I understand the challenges of feeling
+              limited by social norms and expectations. However, I believe that
+              our introverted nature is a gift that can help us become explorers
+              of life in our own unique way.
             </Text>
             <Text style={styles.subtitle}>
               That's why I'm reaching out to invite you, my fellow introverts,
@@ -151,5 +208,21 @@ const styles = StyleSheet.create({
   position: {
     fontSize: 16,
     color: "#808080",
+  },
+
+  socialButtons: {
+    flex: 1,
+    marginVertical: 16,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  button: {
+    width: 48,
+    height: 48,
+    borderRadius: 50,
+    marginRight: 16,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

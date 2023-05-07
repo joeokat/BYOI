@@ -62,7 +62,7 @@ export default function Page() {
     {
       uid: 5,
       title: "Hangout",
-      page: "",
+      page: "https://chat.whatsapp.com/JuyTvyNWx3P7kiqCMPgkIC",
       icon: <Ionicons name="md-chatbubbles-sharp" size={48} color="#1e2632" />,
     },
     {
@@ -74,7 +74,7 @@ export default function Page() {
   ];
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Inside Out</Text>
@@ -126,14 +126,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    // maxHeight: 900,
+    // minHeight: "100vh",
+    alignItems: "center",
+    // justifyContent: "center",
     backgroundColor: "#1e2632",
   },
 
   main: {
+    marginBottom: 32,
     maxWidth: 960,
     marginHorizontal: "auto",
-    marginBottom: 32,
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   title: {

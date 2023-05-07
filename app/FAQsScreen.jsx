@@ -17,7 +17,7 @@ export default function FAQsScreen() {
   };
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.main}>
           <Text style={styles.title}>Frequently Asked Questions</Text>
@@ -108,7 +108,7 @@ export default function FAQsScreen() {
           </Text>
 
           <Text style={styles.title2}>
-            🥶 I am feeling afraid to change or let go. How can I overcome this?
+            😱 I am feeling afraid to change or let go. How can I overcome this?
           </Text>
           <Text
             style={{
