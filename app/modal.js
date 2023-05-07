@@ -1,8 +1,14 @@
-import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
+import { StyleSheet, Text, View, Image, Linking } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 
 export default function About() {
+  function rarible() {
+    const uri = "https://t.co/DQTypIhVhR";
+    Linking.openURL(uri);
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -42,10 +48,31 @@ export default function About() {
 
           <View>
             <View style={styles.profileContainer}>
-              <Image source={"./images/dp.jpg"} style={styles.displayPic} />
+              <Image
+                source={require("../images/dp.jpg")}
+                style={styles.displayPic}
+              />
               <View style={styles.profile}>
-                <Text style={styles.name}>JoeOkat</Text>
-                <Text style={styles.position}>CEO</Text>
+                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                  <Text style={styles.name}>JoeOkat</Text>
+                  <FontAwesome
+                    name="check-circle"
+                    size={16}
+                    color="#ff4747"
+                    style={{ marginHorizontal: 4 }}
+                  />
+                </View>
+                <Text style={styles.position}>Blogger | UI Engineer</Text>
+                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                  <MaterialIcons
+                    name="location-pin"
+                    size={16}
+                    color="#ff4747"
+                    style={{ marginHorizontal: 4 }}
+                  />
+                  <Text style={styles.position}>Accra, Ghana</Text>
+                </View>
+                <View style={styles.socialButtons}></View>
               </View>
             </View>
             <Text style={styles.subtitle}>
@@ -102,6 +129,7 @@ const styles = StyleSheet.create({
 
   profileContainer: {
     flexDirection: "row",
+    alignItems: "center",
   },
 
   profile: {
@@ -109,17 +137,19 @@ const styles = StyleSheet.create({
   },
 
   displayPic: {
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
     resizeMode: "contain",
+    borderRadius: 50,
   },
 
   name: {
     fontSize: 18,
-    fontWeight: "700",
+    fontWeight: "600",
   },
 
   position: {
-    fontSize: 18,
+    fontSize: 16,
+    color: "#808080",
   },
 });

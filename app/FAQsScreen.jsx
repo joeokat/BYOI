@@ -1,8 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Linking,
+  Pressable,
+} from "react-native";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function FAQsScreen() {
+  const buymecoffee = () => {
+    const uri = "https://paystack.com/pay/inside-out";
+    Linking.openURL(uri);
+  };
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -276,15 +289,21 @@ export default function FAQsScreen() {
             PlayStore services, and the core staff of Fleet Labs.
           </Text>
 
-          <Text style={styles.subtitle}>Thanks for your support 🙏🏽.</Text>
-          <View
-            style={{ marginTop: 24 }}
-            href="https://paystack.com/pay/inside-out"
-          >
-            <img
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-              width="200"
-            />
+          <View style={{ marginTop: 24 }}>
+            <Pressable style={styles.buttonStyle} onPress={buymecoffee}>
+              <FontAwesome name="coffee" size={24} color="#212121" />
+              <Text
+                style={{
+                  marginHorizontal: 8,
+                  color: "#212121",
+                  fontSize: 16,
+                  fontWeight: 500,
+                }}
+              >
+                Buy me a coffee
+              </Text>
+            </Pressable>
+            <Text style={styles.centerT}>Thanks for your support 🙏🏽.</Text>
           </View>
         </View>
       </View>
@@ -310,6 +329,13 @@ const styles = StyleSheet.create({
   underline: { textDecorationLine: "underline", color: "#f6f6f6" },
   highlight: { color: "#ffbb1c" },
 
+  centerT: {
+    fontSize: 18,
+    marginTop: 16,
+    color: "#f6f6f6",
+    alignSelf: "center",
+  },
+
   title: {
     fontSize: 32,
     marginBottom: 24,
@@ -328,5 +354,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 16,
     color: "#f6f6f6",
+  },
+
+  buttonStyle: {
+    borderRadius: 50,
+    padding: 8,
+    height: 48,
+    flexDirection: "row",
+    backgroundColor: "#ffe030",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

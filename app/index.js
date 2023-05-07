@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 
 export default function Page() {
@@ -37,9 +37,7 @@ export default function Page() {
       uid: 1,
       title: "Wakening",
       page: "/FirstScreen",
-      icon: (
-        <MaterialIcons name="emoji-food-beverage" size={48} color="#1e2632" />
-      ),
+      icon: <FontAwesome name="child" size={48} color="#1e2632" />,
     },
     {
       uid: 2,
@@ -65,7 +63,7 @@ export default function Page() {
       uid: 5,
       title: "Hangout",
       page: "",
-      icon: <MaterialIcons name="people" size={48} color="#1e2632" />,
+      icon: <Ionicons name="md-chatbubbles-sharp" size={48} color="#1e2632" />,
     },
     {
       uid: 6,
