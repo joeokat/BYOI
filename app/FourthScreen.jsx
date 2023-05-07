@@ -38,7 +38,7 @@ export default function FourthScreen() {
             dreams dead in their tracks.
           </Text>
           <Text style={styles.subtitle}>
-            <Text style={styles.bold}>Be ready for dead ends.</Text> Finding
+            <Text style={styles.bold}>Be ready for dead ends:</Text> Finding
             yourself is a journey, not a destination. A lot of it is trial and
             error. That's the price you pay in return for the satisfaction you
             receive: More often than not, you hit a bump in the road, and
@@ -59,7 +59,7 @@ export default function FourthScreen() {
             </Text>
           </Text>
           <Text style={styles.subtitle}>
-            <Text style={styles.bold}>Serve others.</Text> Mahatma Gandhi once
+            <Text style={styles.bold}>Serve others:</Text> Mahatma Gandhi once
             said that{" "}
             <Text style={styles.italic}>
               "the best way to find yourself is to lose yourself in the service
@@ -90,7 +90,7 @@ export default function FourthScreen() {
             >
               CHECK
             </Text>{" "}
-            likely thoughts that may interest you.
+            likely questions that may interest you.
           </Text>
         </View>
       </View>

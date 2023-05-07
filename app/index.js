@@ -24,7 +24,7 @@ export default function Page() {
       <View style={styles.splashScreen}>
         <View style={styles.splashMain}>
           <Image
-            source={"../images/hat.png"}
+            source={require("../images/hat.png")}
             style={{ width: 100, height: 100 }}
           />
           <Text style={styles.splashTitle}>Inside Out</Text>
