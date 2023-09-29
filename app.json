@@ -4,15 +4,15 @@
     "web": {
       "bundler": "metro"
     },
-    "name": "InsideOut",
-    "slug": "InsideOut",
+    "name": "Freelance UXD: JoeOkat",
+    "slug": "UXD JoeOkat",
     "extra": {
       "eas": {
         "projectId": "228d975f-6a3f-4a66-977a-5537fa926213"
       }
     },
     "android": {
-      "package": "com.joeokat.InsideOut"
+      "package": "com.joeokat.fleetlabsgh"
     }
   }
 }
