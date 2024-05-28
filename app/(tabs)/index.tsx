@@ -33,7 +33,7 @@ const navigation = useNavigation()
             </LinearGradient>
           </MaskedView>
 
-          <Text style={{color: 'white', fontSize: 40,fontWeight: 600,fontFamily: 'Poppins-Bold',display:'flex', flexDirection:'row', flexWrap: 'wrap'}}>Gain industry-standard based skills.</Text>
+          <Text style={{color: 'white', fontSize: 42,fontWeight: 600,fontFamily: 'Poppins-Bold',display:'flex', flexDirection:'row', flexWrap: 'wrap'}}>Gain industry- standard based skills.</Text>
           <Text style={{display:'flex',flexDirection:'row',flexWrap:'wrap', color: 'rgba(255, 255, 255, 0.7)',fontFamily:'Poppins-ExtraLight',fontSize: 14,top: 0}}>
             Get job-ready skills and critical competencies in 3-6 months with our hands-on apprenticeship program.
           </Text>
