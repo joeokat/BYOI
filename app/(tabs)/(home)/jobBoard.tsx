@@ -3,8 +3,8 @@ import React from 'react'
 
 const Jobboard = () => {
   return (
-    <View>
-      <Text>Jobboard</Text>
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={{alignSelf: "center", color: 'white', top: 200}}>Jobboard</Text>
     </View>
   )
 }

@@ -1,8 +1,9 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router'
+import { Link, Navigator, router } from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
 import MaskedView from '@react-native-masked-view/masked-view'
+import { Navigate } from 'react-router-dom'
 
 const index = () => {
   return (
@@ -18,7 +19,7 @@ const index = () => {
       </View>
       <View style={styles.Frame17321}>
           <View style={styles.resIcon}>
-              <Link href="#" style={{position:'absolute', width: 24, height: 30, left:14,top: 5, alignSelf: 'center' }}>
+              <Link push href="#" style={{position:'absolute', width: 24, height: 30, left:14,top: 5, alignSelf: 'center' }}>
                 <Image source={require("../../../assets/images/solar_play-broken.png")} style={{position:'absolute', resizeMode:'cover', width: 24, height: 24, left:5 }} />              
               </Link>
           </View>
@@ -152,9 +153,27 @@ const index = () => {
           <View></View>
         </View>
       </View>
-      <View></View>
+      <View style={styler.Frame11808849}>
+        <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)',display:'flex', flexDirection: 'row',height: 52, justifyContent: 'center', alignItems: 'center',borderRadius: 32,padding: 20}}>
+          <Pressable>
+          <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)', width: 160, height: 40, alignItems: 'center',borderRadius: 24}}>
+            <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Learnig Hive</Text>
+          </View>
+          </Pressable >
+          <Pressable onPress={jobboard}>
+            <View style={{ width: 170, height: 40, alignItems: 'center'}}>
+              <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Job board</Text>
+            </View>
+          </Pressable>
+        </View>
+  
+      </View>
     </View>
   )
+}
+
+const jobboard = () => {
+  router.push('./jobBoard')
 }
 
 const styles= StyleSheet.create({
@@ -399,5 +418,87 @@ const styler =StyleSheet.create({
     width: 61,
     height: 19, 
   },
+  Frame11808849:{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    gap: 10,
+    position: "absolute",
+    width: 342,
+    height: 52,
+    top:774,
+    left: 24,
+  },
+  Rectangle21:{
+    width: 342,
+    height: 52,
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    borderRadius: 32
+  },
+  Frame11808848:{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    gap: 16,
+    
+    position: "absolute",
+    width: 326,
+    height: 40,
+    left: 8,
+    top: 6,
+  },
+  Frame11808847:{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    gap: 10,
+    position: "absolute",
+    width: 155,
+    height: 40,
+    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+    borderRadius: 24,
+    flex: 0,
+  },
+  Frame11808847T:{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    gap: 10,
+
+    width: 155,
+    height: 40,
+    borderRadius: 24,
+    flex: 0,
+  },
+  LearningH:{
+    width: 82,
+    height: 18,
+    fontFamily:'Poppins-Light',
+    fontStyle: 'normal',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+    color: '#ffffff',
+  },
+  job:{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    gap: 10,
+    position: "absolute",
+    width: 155,
+    height: 40,
+    borderRadius: 24,
+  }
 })
 export default index
