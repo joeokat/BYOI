@@ -10,8 +10,6 @@ import { useNavigation } from '@react-navigation/native';
 SplashScreen.preventAutoHideAsync();
 
 const Onboarding: React.FC = () => {
-
-const navigation = useNavigation()
   const GetStarted = () => {
     router.push('./(home)')
 

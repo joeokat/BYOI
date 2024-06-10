@@ -1,4 +1,4 @@
-import { View, Text,Pressable,StyleSheet,Image } from 'react-native'
+import { View, Text,Pressable,StyleSheet,Image, ScrollView } from 'react-native'
 import React,{useContext} from 'react'
 import { router,Link } from 'expo-router'
 import {AppContext} from "../../context"
@@ -34,7 +34,7 @@ const handlePress = () => {
                 </Link>   
           </View>
       </View>
-      <View style={{position: 'absolute',width: 342, height: 48,left: 30,top: 126, backgroundColor: '#12182B',borderRadius: 24}}>
+      <View style={{position: 'absolute',width: 342, height: 48,left: 20,top: 126, backgroundColor: '#12182B',borderRadius: 24}}>
         <View style={{display: 'flex', flexDirection:'row',justifyContent:'space-between',alignItems:'center',gap: 8,position: 'absolute', top: 13,left: 20,right: 4}}>
           <Text style={{fontFamily: 'Poppins-ExtraLight',fontStyle:'normal',fontSize: 12, lineHeight: 18 ,color: 'rgba(255, 255, 255, 0.5)'}}>Search for Contract or Full-time jobs</Text>
           <View style={{margin: 'auto',width: 27,height: 27,opacity: 0.6,}}>
@@ -44,29 +44,152 @@ const handlePress = () => {
       </View>
       <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 50,left: 25,right: 10, width: 342,height: 24, top: 198, position: 'absolute'}}>
         <Text style={{width: 92, height: 24, fontFamily: "Poppins-Bold", fontStyle: 'normal', fontSize: 16, color: "#ffffff", }}>Open Roles</Text>
-        <Text style={{width: 155, height: 18, fontFamily: "Poppins-Bold", fontStyle: 'normal', fontSize: 12,textAlign: 'right',color: "#E6D7A3",right: 10
-          
-         }}>more coming soon</Text>
+        <Text style={{width: 155, height: 18, fontFamily: "Poppins-Bold", fontStyle: 'normal', fontSize: 12,textAlign: 'right',color: "#E6D7A3",right: 10}}>more coming soon</Text>
       </View>
-      <View style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 10, position: 'absolute', width: 342, height: 490, left: 24, top: 246, overflow: "scroll"}}>
-        <View style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', padding: 22, gap: 10, width: 342, height: 160.5, backgroundColor: "#12182B",borderRadius: 17.6}}>
-          <View style={{display: 'flex', flexDirection: "column", alignItems: "flex-start", gap: 8, width: 298,height: 116.5}}>
-            <View style={{display: 'flex', flexDirection: "row",justifyContent: 'space-between', alignItems: "flex-start", gap: 33, width: 297,height: 49.5}}>
-              <View style={{display: 'flex', flexDirection:"column",justifyContent: 'center', alignItems: "flex-start", gap: 4.4, width: 159.4,height: 49.4}}>
-                <View style={{display: 'flex', flexDirection: "row", alignItems: "center", gap: 4.4, width: 159.4,height: 24}}>
-                  <Text style={{width: 139, height: 24, fontFamily: "Poppins-Bold", fontStyle: 'normal', fontSize: 16, color: "#ffffff",}}>Fleet Labs Ghana</Text>
+      <ScrollView style={styles.Frame26086296} showsVerticalScrollIndicator={false}>
+        <View style={{justifyContent: 'space-between',gap: 20}}>
+        <View style={styles.job}>
+          <View style={styles.Frame26086294}>
+            <View style={styles.Frame26086293}>
+              <View style={styles.info}>
+                <View style={styles.Frame1}>
+                  <Text style={styles.FLGhana}>Fleet Labs Ghana</Text>
                   <Image source={require('../../../assets/images/carbon_checkmark-filled.png')} style={{width: 16, height: 16}} />
                 </View>
-                <Text></Text>
+                <Text style={styles.FLDev}>
+                  Flutter Developer
+                </Text>
               </View>
-
+              <Text style={styles.ago}>
+                3d ago
+              </Text>
             </View>
-            <View></View>
-            <View></View>
+              <View style={styles.benefits}>
+                <View style={styles.contestents1}>
+                  <Text style={styles.contestText}>Mampong</Text>
+                </View>
+                <View style={styles.contestents2}>
+                  <Text style={styles.contestText}>Full-time</Text>
+                </View>
+              </View>
+            <View style={{width: 298, height: 30.4}}>
+              <View style={styles.Frame70}>
+                <View style={styles.Frame26086291}>
+                  <Image source={require("../../../assets/images/nhyira.png")} style={{width: 6.8, height: 13.2}} />
+                  <Text style={styles.Eapply}>Easy Apply</Text>
+                </View>
+              </View>
+            </View>
           </View>
 
         </View>
-      </View>
+        <View style={styles.job}>
+          <View style={styles.Frame26086294}>
+            <View style={styles.Frame26086293}>
+              <View style={styles.info}>
+                <View style={styles.Frame1}>
+                  <Text style={styles.FLGhana}>Fleet Labs Ghana</Text>
+                  <Image source={require('../../../assets/images/carbon_checkmark-filled.png')} style={{width: 16, height: 16}} />
+                </View>
+                <Text style={styles.FLDev}>
+                  Flutter Developer
+                </Text>
+              </View>
+              <Text style={styles.ago}>
+                3d ago
+              </Text>
+            </View>
+              <View style={styles.benefits}>
+                <View style={styles.contestents1}>
+                  <Text style={styles.contestText}>Mampong</Text>
+                </View>
+                <View style={styles.contestents2}>
+                  <Text style={styles.contestText}>Full-time</Text>
+                </View>
+              </View>
+            <View style={{width: 298, height: 30.4}}>
+              <View style={styles.Frame70}>
+                <View style={styles.Frame26086291}>
+                  <Image source={require("../../../assets/images/nhyira.png")} style={{width: 6.8, height: 13.2}} />
+                  <Text style={styles.Eapply}>Easy Apply</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+
+        </View>
+        <View style={styles.job}>
+          <View style={styles.Frame26086294}>
+            <View style={styles.Frame26086293}>
+              <View style={styles.info}>
+                <View style={styles.Frame1}>
+                  <Text style={styles.FLGhana}>Fleet Labs Ghana</Text>
+                  <Image source={require('../../../assets/images/carbon_checkmark-filled.png')} style={{width: 16, height: 16}} />
+                </View>
+                <Text style={styles.FLDev}>
+                  Flutter Developer
+                </Text>
+              </View>
+              <Text style={styles.ago}>
+                3d ago
+              </Text>
+            </View>
+              <View style={styles.benefits}>
+                <View style={styles.contestents1}>
+                  <Text style={styles.contestText}>Mampong</Text>
+                </View>
+                <View style={styles.contestents2}>
+                  <Text style={styles.contestText}>Full-time</Text>
+                </View>
+              </View>
+            <View style={{width: 298, height: 30.4}}>
+              <View style={styles.Frame70}>
+                <View style={styles.Frame26086291}>
+                  <Image source={require("../../../assets/images/nhyira.png")} style={{width: 6.8, height: 13.2}} />
+                  <Text style={styles.Eapply}>Easy Apply</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+
+        </View>
+        <View style={styles.job}>
+          <View style={styles.Frame26086294}>
+            <View style={styles.Frame26086293}>
+              <View style={styles.info}>
+                <View style={styles.Frame1}>
+                  <Text style={styles.FLGhana}>Fleet Labs Ghana</Text>
+                  <Image source={require('../../../assets/images/carbon_checkmark-filled.png')} style={{width: 16, height: 16}} />
+                </View>
+                <Text style={styles.FLDev}>
+                  Flutter Developer
+                </Text>
+              </View>
+              <Text style={styles.ago}>
+                3d ago
+              </Text>
+            </View>
+              <View style={styles.benefits}>
+                <View style={styles.contestents1}>
+                  <Text style={styles.contestText}>Mampong</Text>
+                </View>
+                <View style={styles.contestents2}>
+                  <Text style={styles.contestText}>Full-time</Text>
+                </View>
+              </View>
+            <View style={{width: 298, height: 30.4}}>
+              <View style={styles.Frame70}>
+                <View style={styles.Frame26086291}>
+                  <Image source={require("../../../assets/images/nhyira.png")} style={{width: 6.8, height: 13.2}} />
+                  <Text style={styles.Eapply}>Easy Apply</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+
+        </View>
+        </View>
+      </ScrollView>
        <View style={styles.Frame11808849}>
             <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)',display:'flex', flexDirection: 'row',height: 52, justifyContent: 'center', alignItems: 'center',borderRadius: 32,padding: 15,gap: 5}}>
           <Pressable onPress={handlePress}>
@@ -83,6 +206,7 @@ const handlePress = () => {
   
       </View>
     </View>
+    
   )
 }
 
@@ -94,7 +218,7 @@ const styles = StyleSheet.create({
     height: 844,
     backgroundColor: "#030A1E",
 },
-frame11808843:{
+  frame11808843:{
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -107,12 +231,12 @@ frame11808843:{
   left: 20,
   top: 38,
 },
-Ellipse:{
+  Ellipse:{
   width: 56,
   height: 56,
   flexGrow: 0,
 },
-Welcome:{
+  Welcome:{
   width: 141,
   height: 54,
   fontFamily: "Poppins-Bold",
@@ -154,6 +278,166 @@ Welcome:{
     top:774,
     left: 24,
   },
+  Frame26086296:{
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: 30, 
+    position: 'absolute',
+    width: 342, 
+    height: 490, 
+    left: 24, 
+    top: 246, 
+    overflow: "scroll",
+    
+  },
+  job:{
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'flex-start', 
+    padding: 22, 
+    gap: 10,
+   
+    width: 342, 
+    height: 160.5, 
+    backgroundColor: "#12182B",
+    borderRadius: 17.6
+  },
+  Frame26086294:{
+  display: 'flex', 
+  flexDirection: "column", 
+  alignItems: "flex-start", 
+  gap: 8, 
+  width: 298,
+  height: 116.5
+},
+  Frame26086293:{
+    display: 'flex', 
+    flexDirection: "row",
+    justifyContent: 'space-between', 
+    alignItems: "flex-start", 
+    gap: 33, 
+    width: 297,
+    height: 49.5
+  },
+  info:{
+    display: 'flex', 
+    flexDirection:"column",
+    justifyContent: 'center', 
+    alignItems: "flex-start", 
+    gap: 4.4, 
+    width: 159.4,
+    height: 49.4
+  },
+  Frame1:{
+    display: 'flex', 
+    flexDirection: "row", 
+    alignItems: "center", 
+    gap: 4.4, 
+    width: 159.4,
+    height: 24
+  },
+  FLGhana:{
+    width: 139, 
+    height: 24, 
+    fontFamily: "Poppins-Bold", 
+    fontStyle: 'normal', 
+    fontSize: 16, 
+    color: "#ffffff",
+  },
+  FLDev:{
+    width: 157, 
+    height: 21, 
+    fontFamily: "Poppins-Bold", 
+    fontStyle: 'normal', 
+    fontSize: 14,
+    lineHeight: 21, 
+    color: "#ffffff"
+  },
+  ago:{
+    width: 36, 
+    height: 15, 
+    fontFamily: "Poppins-Bold", 
+    fontStyle: 'normal', 
+    fontSize: 10,
+    lineHeight: 15,
+    textAlign: 'center', 
+    color: "#ffffff"
+  },
+  benefits:{
+    display: 'flex', 
+    flexDirection: "row", 
+    alignItems: "flex-start", 
+    gap: 4, 
+    width: 144.8,
+    height: 20.7
+  },
+  contestents1:{
+    display: 'flex', 
+    flexDirection: "row", 
+    alignItems: "flex-start", 
+    gap: 5.5,
+    paddingVertical: 3.8,
+    paddingHorizontal: 13.2, 
+    width: 73.4,
+    height: 20.7,
+    backgroundColor:"#E6D7A3",
+    borderRadius: 27.5
+  },
+  contestents2:{
+    display: 'flex', 
+    flexDirection: "row", 
+    alignItems: "flex-start", 
+    gap: 5.5,
+    paddingVertical: 3.8,
+    paddingHorizontal: 13.2, 
+    width: 73.4,
+    height: 20.7,
+    backgroundColor:"#F6BF47",
+    borderRadius: 27.5
+  },
+  contestText:{
+    width: 67, 
+    height: 13, 
+    fontFamily: "Poppins-Bold", 
+    fontStyle: 'normal', 
+    fontSize: 8.8,
+    lineHeight: 13,
+    color: "#212121",
+  },
+  Frame70:{
+    display: 'flex', 
+    flexDirection: "column", 
+    alignItems: "flex-start", 
+    gap: 5.5,
+    paddingVertical: 7.7,
+    paddingHorizontal: 17.6,
+    position: 'absolute',
+    left: 196.61, 
+    width: 101.4,
+    height: 30.4, 
+    backgroundColor: "#FFBB1C",
+    borderWidth: 0.55,
+    borderColor: '#FFD24B',
+    borderRadius: 22
+  },
+  Frame26086291:{
+    display: 'flex', 
+    flexDirection: "row",
+    justifyContent: 'center', 
+    alignItems: "center", 
+    gap: 4.4, 
+    width: 66.2,
+    height: 15
+  },
+  Eapply:{
+    width: 60, 
+    height: 15, 
+    fontFamily: "Poppins-Bold", 
+    fontStyle: 'normal', 
+    fontSize: 10,
+    lineHeight: 15,
+    color: "#101010",
+  }
 })
 
 
