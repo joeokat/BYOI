@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Image, Pressable, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
-import { Link, router } from 'expo-router'
+import { Link, router,} from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
 import MaskedView from '@react-native-masked-view/masked-view'
 import {AppContext} from "../../context"
@@ -60,7 +60,7 @@ const handlePress = () => {
         </View>
         <View style={styler.ForYou}>
           <View style={styler.More}>
-            <View style={styler.Group12}>
+            <TouchableOpacity style={styler.Group12} onPress={()=> router.push("../Pages/CourseLesson")} >
               <View style={styler.Rectangle12}>
                 <Image source={require("../../../assets/images/Rectangle 15.png")}/>
               </View>
@@ -82,7 +82,7 @@ const handlePress = () => {
                   <Text style={{color: '#F5505B',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Expert</Text>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
             <View style={styler.Group12}>
               <View style={styler.Rectangle12}>
                 <Image source={require("../../../assets/images/Rectangle 15 (1).png")}/>
