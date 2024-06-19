@@ -1,11 +1,16 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
-import React from 'react'
-import { Link, Navigator, router } from 'expo-router'
+import { View, Text, StyleSheet, Image, Pressable, TouchableOpacity } from 'react-native'
+import React, { useContext } from 'react'
+import { Link, router,} from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
 import MaskedView from '@react-native-masked-view/masked-view'
-import { Navigate } from 'react-router-dom'
+import {AppContext} from "../../context"
 
 const index = () => {
+const {Page,change} = useContext(AppContext);
+const handlePress = () => {
+  router.push('./jobBoard');
+}
+
   return (
     <View style={styles.container}>
       <View style={styles.frame11808843}>
@@ -55,7 +60,7 @@ const index = () => {
         </View>
         <View style={styler.ForYou}>
           <View style={styler.More}>
-            <View style={styler.Group12}>
+            <TouchableOpacity style={styler.Group12} onPress={()=> router.push("../Pages/CourseLesson")} >
               <View style={styler.Rectangle12}>
                 <Image source={require("../../../assets/images/Rectangle 15.png")}/>
               </View>
@@ -77,7 +82,7 @@ const index = () => {
                   <Text style={{color: '#F5505B',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Expert</Text>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
             <View style={styler.Group12}>
               <View style={styler.Rectangle12}>
                 <Image source={require("../../../assets/images/Rectangle 15 (1).png")}/>
@@ -154,14 +159,14 @@ const index = () => {
         </View>
       </View>
       <View style={styler.Frame11808849}>
-        <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)',display:'flex', flexDirection: 'row',height: 52, justifyContent: 'center', alignItems: 'center',borderRadius: 32,padding: 20}}>
-          <Pressable>
+        <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)',display:'flex', flexDirection: 'row',height: 52, justifyContent: 'center', alignItems: 'center',borderRadius: 32,padding: 15,gap: 5}}>
+          <Pressable >
           <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)', width: 160, height: 40, alignItems: 'center',borderRadius: 24}}>
             <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Learnig Hive</Text>
           </View>
           </Pressable >
-          <Pressable onPress={jobboard}>
-            <View style={{ width: 170, height: 40, alignItems: 'center'}}>
+          <Pressable onPress={handlePress}>
+            <View style={{backgroundColor:"", width: 170, height: 40, alignItems: 'center'}}>
               <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Job board</Text>
             </View>
           </Pressable>
@@ -172,9 +177,7 @@ const index = () => {
   )
 }
 
-const jobboard = () => {
-  router.push('./jobBoard')
-}
+
 
 const styles= StyleSheet.create({
     container:{
