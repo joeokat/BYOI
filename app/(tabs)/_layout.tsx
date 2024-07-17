@@ -11,18 +11,26 @@ export default function TabLayout() {
 
   return (
     <Stack
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#f4511e',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-      headerShown: false,
-    }}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#f4511e",
+        },
+        headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+        headerShown: false,
+      }}
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="(home)"
+        options={{ headerShown: false, animation: "ios" }}
+      />
+      <Stack.Screen
+        name="(pages)"
+        options={{ headerShown: false, animation: "ios" }}
+      />
       <Stack.Screen name="explore" />
     </Stack>
   );

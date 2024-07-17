@@ -15,39 +15,66 @@ const handlePress = () => {
     <View style={styles.container}>
       <View style={styles.frame11808843}>
         <View style={styles.Ellipse}>
-            <Image source={require("../../../assets/images/Ellipse 1.png")} />
+          <Image source={require("../../../assets/images/Ellipse 1.png")} />
         </View>
         <View style={styles.Welcome}>
-        <Text style={{fontSize: 14,color:'white',fontFamily:'Poppins-Bold'}}>Welcome to</Text>
-        <Text style={{fontSize:16,color: 'white',fontFamily:'Poppins-Bold'}}>BYOI Learning</Text>
+          <Text style={styles.welcome}>Welcome to</Text>
+          <Text style={styles.BYOI}>BYOI Learning</Text>
         </View>
       </View>
       <View style={styles.Frame17321}>
-          <View style={styles.resIcon}>
-              <Link push href="#" style={{position:'absolute', width: 24, height: 30, left:14,top: 5, alignSelf: 'center' }}>
-                <Image source={require("../../../assets/images/solar_play-broken.png")} style={{position:'absolute', resizeMode:'cover', width: 24, height: 24, left:5 }} />              
-              </Link>
-          </View>
-          <View style={styles.resIcon}>
-                <Link href='../Pages/alumini' style={{position:'absolute', width: 35, height: 40, left:5 }}>
-                <Image source={require("../../../assets/images/Group.png")} style={{position:'absolute',resizeMode:'contain', width: 35, height: 30, left:5 }}/>
-                </Link>   
-          </View>
+        <View style={styles.resIcon}>
+          <Link push href="#" style={styles.Link1}>
+            <Image
+              source={require("../../../assets/images/solar_play-broken.png")}
+              style={styles.Image1}
+            />
+          </Link>
+        </View>
+        <View style={[styles.resIcon, { backgroundColor: "#12182B" }]}>
+          <Link href="./alumini" style={styles.Link2}>
+            <Image
+              source={require("../../../assets/images/Group.png")}
+              style={styles.Image2}
+            />
+          </Link>
+        </View>
       </View>
       <View style={styles.ads}>
-        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['rgba(157,77,82,0.37)','rgba(16,30,59,1)','rgba(148,176,97,0.51)']} style={{left:22, top:0,height:151,width:342, borderRadius:20}}>
+        <LinearGradient
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(157,77,82,0.37)",
+            "rgba(16,30,59,1)",
+            "rgba(148,176,97,0.51)",
+          ]}
+          style={styles.gradient}
+        >
           <View style={styles.announcement}>
-          <View style={styles.CTA}>
+            <View style={styles.CTA}>
               <Text style={styles.JoinAClass}>Join a Class For Free</Text>
-              <Image source={require("../../../assets/images/teenyicons_arrow-up-outline.png")} />
+              <Image
+                source={require("../../../assets/images/teenyicons_arrow-up-outline.png")}
+              />
             </View>
-            <View style={{ width: 255,height: 85,top: 20}}>
+            <View style={styles.Learncontainer}>
               <Text style={styles.Learn}>Learn the most creative</Text>
-                <MaskedView maskElement={<Text style={{ fontSize: 15,fontWeight: 100,top: 10, fontFamily: 'Poppins-Bold' }} >in-demand skills</Text>} style={{height: 30,}}>
-                  <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['#F5525B', '#F6BF47', '#4BCCA5']} style={{height: 30, }}>
+              <MaskedView
+                maskElement={
+                  <Text style={styles.maskedtext}>in-demand skills</Text>
+                }
+                style={{ height: 30 }}
+              >
+                <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  colors={["#F5525B", "#F6BF47", "#4BCCA5"]}
+                  style={{ height: 30 }}
+                >
                   <Text></Text>
-                  </LinearGradient>
-                </MaskedView> 
+                </LinearGradient>
+              </MaskedView>
               <Text style={styles.Learn}>curated for you.</Text>
             </View>
           </View>
@@ -60,230 +87,396 @@ const handlePress = () => {
         </View>
         <View style={styler.ForYou}>
           <View style={styler.More}>
-            <TouchableOpacity style={styler.Group12} onPress={()=> router.push("../Pages/CourseLesson")} >
+            <TouchableOpacity
+              style={styler.Group12}
+              onPress={() => router.push("./CourseLesson")}
+            >
               <View style={styler.Rectangle12}>
-                <Image source={require("../../../assets/images/Rectangle 15.png")}/>
+                <Image
+                  source={require("../../../assets/images/Rectangle 15.png")}
+                />
               </View>
-              <View style={{display: 'flex', flexDirection: 'column', top: 107,left: 15, width: 160,gap: 4}}>
+              <View style={styles.Container}>
                 <View>
-                  <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>Product Design</Text>
+                  <Text style={styles.productDesignText}>Product Design</Text>
                 </View>
-                <View style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', width:150, }}>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4, width: 60}}>
-                    <Image source={require('../../../assets/images/ant-design_play-circle-outlined.png')}  />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>8 Hours</Text>
+                <View style={styles.rowContainer}>
+                  <View style={styles.row}>
+                    <Image
+                      source={require("../../../assets/images/ant-design_play-circle-outlined.png")}
+                    />
+                    <Text style={styles.rowText}>8 Hours</Text>
                   </View>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4,right: 10}}>
-                    <Image source={require('../../../assets/images/ci_group.png')} />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>76k learners</Text>
+                  <View style={[styles.row, styles.learnersRow]}>
+                    <Image
+                      source={require("../../../assets/images/ci_group.png")}
+                    />
+                    <Text style={styles.rowText}>76k learners</Text>
                   </View>
                 </View>
-                <View style={{backgroundColor: 'rgba(245, 80, 91, 0.21)',height:19,width: 63,borderRadius:8,alignContent:'center'}}>
-                  <Text style={{color: '#F5505B',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Expert</Text>
+                <View style={styles.expertContainer}>
+                  <Text style={styles.expertText}>Expert</Text>
                 </View>
               </View>
             </TouchableOpacity>
-            <View style={styler.Group12}>
+            <TouchableOpacity
+              style={styler.Group12}
+              onPress={() => router.push("./CourseLesson")}
+            >
               <View style={styler.Rectangle12}>
-                <Image source={require("../../../assets/images/Rectangle 15 (1).png")}/>
+                <Image
+                  source={require("../../../assets/images/Rectangle 15 (1).png")}
+                />
               </View>
-              <View style={{display: 'flex', flexDirection: 'column', top: 107,left: 15, width: 160,gap: 4}}>
+              <View style={styles.Container}>
                 <View>
-                  <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>React</Text>
+                  <Text style={styles.productDesignText}>Product Design</Text>
                 </View>
-                <View style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', width:150, }}>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4, width: 60}}>
-                    <Image source={require('../../../assets/images/ant-design_play-circle-outlined.png')}  />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>6 Hours</Text>
+                <View style={styles.rowContainer}>
+                  <View style={styles.row}>
+                    <Image
+                      source={require("../../../assets/images/ant-design_play-circle-outlined.png")}
+                    />
+                    <Text style={styles.rowText}>8 Hours</Text>
                   </View>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4,right: 10}}>
-                    <Image source={require('../../../assets/images/ci_group.png')} />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>482k learners</Text>
+                  <View style={[styles.row, styles.learnersRow]}>
+                    <Image
+                      source={require("../../../assets/images/ci_group.png")}
+                    />
+                    <Text style={styles.rowText}>76k learners</Text>
                   </View>
                 </View>
-                <View style={{backgroundColor: 'rgba(66, 159, 248, 0.2)',height:19,width: 91,borderRadius:8,alignContent:'center'}}>
-                  <Text style={{color: '#429FF8',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Professional</Text>
+                <View style={styles.expertContainer}>
+                  <Text style={styles.expertText}>Expert</Text>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={styler.More}>
-            <View style={styler.Group12}>
+            <TouchableOpacity
+              style={styler.Group12}
+              onPress={() => router.push("./CourseLesson")}
+            >
               <View style={styler.Rectangle12}>
-                <Image source={require("../../../assets/images/Rectangle 15 (2).png")}/>
+                <Image
+                  source={require("../../../assets/images/Rectangle 15 (2).png")}
+                />
               </View>
-              <View style={{display: 'flex', flexDirection: 'column', top: 107,left: 15, width: 160,gap: 4}}>
+              <View style={styles.Container}>
                 <View>
-                  <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>React Native</Text>
+                  <Text style={styles.productDesignText}>Product Design</Text>
                 </View>
-                <View style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', width:150, }}>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4, width: 60}}>
-                    <Image source={require('../../../assets/images/ant-design_play-circle-outlined.png')}  />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>4 Hours</Text>
+                <View style={styles.rowContainer}>
+                  <View style={styles.row}>
+                    <Image
+                      source={require("../../../assets/images/ant-design_play-circle-outlined.png")}
+                    />
+                    <Text style={styles.rowText}>8 Hours</Text>
                   </View>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4,right: 10}}>
-                    <Image source={require('../../../assets/images/ci_group.png')} />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>262k learners</Text>
+                  <View style={[styles.row, styles.learnersRow]}>
+                    <Image
+                      source={require("../../../assets/images/ci_group.png")}
+                    />
+                    <Text style={styles.rowText}>76k learners</Text>
                   </View>
                 </View>
-                <View style={{backgroundColor: 'rgba(75, 204, 165, 0.2)',height:19,width: 98,borderRadius:8,alignContent:'center'}}>
-                  <Text style={{color: '#97C93F',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Foundation</Text>
+                <View style={styles.expertContainer}>
+                  <Text style={styles.expertText}>Expert</Text>
                 </View>
               </View>
-            </View>
-            <View style={styler.Group12}>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styler.Group12}
+              onPress={() => router.push("./CourseLesson")}
+            >
               <View style={styler.Rectangle12}>
-                <Image source={require("../../../assets/images/Rectangle 15 (3).png")}/>
+                <Image
+                  source={require("../../../assets/images/Rectangle 15 (3).png")}
+                />
               </View>
-              <View style={{display: 'flex', flexDirection: 'column', top: 107,left: 15, width: 160,gap: 4}}>
+              <View style={styles.Container}>
                 <View>
-                  <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>Flutter</Text>
+                  <Text style={styles.productDesignText}>Product Design</Text>
                 </View>
-                <View style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', width:150, }}>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4, width: 60}}>
-                    <Image source={require('../../../assets/images/ant-design_play-circle-outlined.png')}  />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>2 Hours</Text>
+                <View style={styles.rowContainer}>
+                  <View style={styles.row}>
+                    <Image
+                      source={require("../../../assets/images/ant-design_play-circle-outlined.png")}
+                    />
+                    <Text style={styles.rowText}>8 Hours</Text>
                   </View>
-                  <View style={{display: 'flex', flexDirection:'row', alignItems: 'center', gap: 4,right: 10}}>
-                    <Image source={require('../../../assets/images/ci_group.png')} />
-                    <Text style={{color: 'white',fontFamily: 'Poppins-Light',fontSize: 10}}>186k learners</Text>
+                  <View style={[styles.row, styles.learnersRow]}>
+                    <Image
+                      source={require("../../../assets/images/ci_group.png")}
+                    />
+                    <Text style={styles.rowText}>76k learners</Text>
                   </View>
                 </View>
-                <View style={{backgroundColor: 'rgba(255, 187, 28, 0.2)',height:19,width: 78,borderRadius:8,alignContent:'center'}}>
-                  <Text style={{color: '#FFBB1C',alignSelf: 'center',fontFamily:'Poppins-Regular', fontSize:10}}>Intermediate</Text>
+                <View style={styles.expertContainer}>
+                  <Text style={styles.expertText}>Expert</Text>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
           <View></View>
         </View>
       </View>
       <View style={styler.Frame11808849}>
-        <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)',display:'flex', flexDirection: 'row',height: 52, justifyContent: 'center', alignItems: 'center',borderRadius: 32,padding: 15,gap: 5}}>
-          <Pressable >
-          <View style={{backgroundColor: 'rgba(255, 255, 255, 0.06)', width: 160, height: 40, alignItems: 'center',borderRadius: 24}}>
-            <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Learnig Hive</Text>
-          </View>
-          </Pressable >
+        <View style={styles.view}>
+          <Pressable>
+            <View style={styles.hiveButton}>
+              <Text style={styles.buttonText}>Learning Hive</Text>
+            </View>
+          </Pressable>
           <Pressable onPress={handlePress}>
-            <View style={{backgroundColor:"", width: 170, height: 40, alignItems: 'center'}}>
-              <Text style={{color: '#ffffff', alignSelf: 'center', top: 15}}>Job board</Text>
+            <View style={styles.jobBoardButton}>
+              <Text style={styles.buttonText}>Job board</Text>
             </View>
           </Pressable>
         </View>
-  
       </View>
     </View>
-  )
+  );
 }
 
 
 
-const styles= StyleSheet.create({
-    container:{
-        position: "relative",
-        width: 390,
-        height: 844,
-        backgroundColor: "#030A1E",
-    },
-    frame11808843:{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        padding: 0,
-        gap: 8,
-        
-        position: "absolute",
-        width: 209,
-        height: 56,
-        left: 20,
-        top: 38,
-    },
-    Ellipse:{
-        width: 56,
-        height: 56,
-        flexGrow: 0,
-    },
-    Welcome:{
-        width: 141,
-        height: 54,
-        fontFamily: "Poppins-Bold",
-        color: "#FFFFFF",
-        flex: 0,
-        flexGrow: 0,
-    },
-    Frame17321:{
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "flex-start",
-      padding: 3,
-      gap: 3,
-      position: "absolute",
-      width: 109,
-      height: 56,
-      left: 257,
-      top: 38,
-      backgroundColor: "#12182B",
-      borderRadius: 100,
-    },
-    resIcon:{
-      width: 50,
-      height: 50,
-      backgroundColor: "#030A1E",
-      borderRadius: 24,
-      alignContent:'center'
-    },
-    ads:{
-      position: "absolute",
-      width: 342,
-      height: 151,
-      left: 0,
-      top: 126,
-    },
-    announcement:{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "flex-start",
-      padding: 0,
-      
-      position: "absolute",
-      width: 302,
-      height: 109,
-      left: 20,
-    },
-    CTA:{
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      
-      top: 20,
-      padding: 0,
-      gap: 8,
-      
-      width: 302,
-      height: 24,
-    },
-    JoinAClass:{
-      color: '#E5D7A3',
-      width: 153,
-      height: 21,
-      
-      fontFamily: 'Poppins-Light',
-      fontStyle: "normal",
-      
-      fontSize: 14,
-      lineHeight: 21,
-    },
-    Learn:{ 
-      fontFamily: 'Poppins-Regular',
-      fontStyle: "normal",
-      top: 10,
-      color: 'white',
-      fontSize: 20,
-      lineHeight: 30,
-      
-    }
-})
+const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+    width: "100%",
+    height: "100%",
+    padding: 4,
+    backgroundColor: "#030A1E",
+  },
+  frame11808843: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 0,
+    gap: 8,
+
+    position: "absolute",
+    width: 209,
+    height: 56,
+    left: 20,
+    top: 38,
+  },
+  Ellipse: {
+    width: 56,
+    height: 56,
+    flexGrow: 0,
+  },
+  Welcome: {
+    width: 141,
+    height: 54,
+    fontFamily: "Poppins-Bold",
+    color: "#FFFFFF",
+    flex: 0,
+    flexGrow: 0,
+  },
+  BYOI:{
+    fontSize: 16, 
+    color: "white", 
+    fontFamily: "Poppins-Bold",
+  },
+  Frame17321: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    padding: 3,
+    gap: 3,
+    position: "absolute",
+    width: 109,
+    height: 56,
+    left: 257,
+    top: 38,
+    backgroundColor: "#12182B",
+    borderRadius: 100,
+  },
+  resIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: "#030A1E",
+    borderRadius: 24,
+    alignContent: "center",
+  },
+  ads: {
+    position: "absolute",
+    width: 342,
+    height: 151,
+    left: 0,
+    top: 126,
+  },
+  announcement: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: 0,
+
+    position: "absolute",
+    width: 302,
+    height: 109,
+    left: 20,
+  },
+  CTA: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+
+    top: 20,
+    padding: 0,
+    gap: 8,
+
+    width: 302,
+    height: 24,
+  },
+  Learncontainer: {
+    width: 255,
+    height: 85,
+    top: 20,
+  },
+  JoinAClass: {
+    color: "#E5D7A3",
+    width: 153,
+    height: 21,
+
+    fontFamily: "Poppins-Light",
+    fontStyle: "normal",
+
+    fontSize: 14,
+    lineHeight: 21,
+  },
+  Link1: {
+    position: "absolute",
+    width: 24,
+    height: 30,
+    left: 14,
+    top: 5,
+    alignSelf: "center",
+  },
+  Link2: {
+    position: "absolute",
+    width: 35,
+    height: 40,
+    left: 5,
+  },
+  Image1: {
+    position: "absolute",
+    resizeMode: "cover",
+    width: 24,
+    height: 24,
+    left: 5,
+  },
+  Image2: {
+    position: "absolute",
+    resizeMode: "contain",
+    width: 35,
+    height: 30,
+    left: 5,
+  },
+  gradient: {
+    left: 22,
+    top: 0,
+    height: 151,
+    width: 342,
+    borderRadius: 20,
+  },
+  Learn: {
+    fontFamily: "Poppins-Regular",
+    fontStyle: "normal",
+    top: 10,
+    color: "white",
+    fontSize: 20,
+    lineHeight: 30,
+  },
+  welcome: {
+    fontSize: 14,
+    color: "white",
+    fontFamily: "Poppins-Bold",
+  },
+  Container: {
+    display: "flex",
+    flexDirection: "column",
+    top: 107,
+    left: 15,
+    width: 160,
+    gap: 4,
+  },
+  productDesignText: {
+    color: "white",
+    fontFamily: "Poppins-Light",
+    fontSize: 10,
+  },
+  rowContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: 150,
+  },
+  row: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    width: 60,
+  },
+  rowText: {
+    color: "white",
+    fontFamily: "Poppins-Light",
+    fontSize: 10,
+  },
+  learnersRow: {
+    right: 10,
+  },
+  expertContainer: {
+    backgroundColor: "rgba(245, 80, 91, 0.21)",
+    height: 19,
+    width: 63,
+    borderRadius: 8,
+    alignContent: "center",
+  },
+  expertText: {
+    color: "#F5505B",
+    alignSelf: "center",
+    fontFamily: "Poppins-Regular",
+    fontSize: 10,
+  },
+  view: {
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    display: "flex",
+    flexDirection: "row",
+    height: 52,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 32,
+    padding: 15,
+    gap: 5,
+  },
+  hiveButton: {
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    width: 160,
+    height: 40,
+    alignItems: "center",
+    borderRadius: 24,
+  },
+  jobBoardButton: {
+    backgroundColor: "",
+    width: 170,
+    height: 40,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#ffffff",
+    alignSelf: "center",
+    top: 15,
+  },
+  maskedtext: {
+    fontSize: 15,
+    top: 10,
+    fontFamily: "Poppins-Bold",
+  },
+});
 const styler =StyleSheet.create({
   personalised:{
     display: "flex",
